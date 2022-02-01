@@ -6,14 +6,20 @@
     v-model.trim="inputText"
     @keyup="$emit('searchUp', inputText)"
     >
-    <select name="" id="" v-model="genreValue" @change="$emit('genreUp', genreValue)">
-        <option value="">All</option>
-        <option :value="genre" v-for="(genre, index) in optionsGenre" :key="index">{{genre}}</option>
-    </select>
-    <select name="" id="" v-model="authorValue" @change="$emit('authorUp', authorValue)">
-        <option value="">All</option>
-        <option :value="author" v-for="(author, index) in optionsAuthor" :key="index">{{author}}</option>
-    </select>
+    <div>
+        <label for="genre">Genere: </label>
+        <select name="" id="genre" v-model="genreValue" @change="$emit('genreUp', genreValue)">
+            <option value="">All</option>
+            <option :value="genre" v-for="(genre, index) in optionsGenre" :key="index">{{genre}}</option>
+        </select>
+    </div>
+    <div>
+        <label for="authors">Autori: </label>
+        <select name="" id="authors" v-model="authorValue" @change="$emit('authorUp', authorValue)">
+            <option value="">All</option>
+            <option :value="author" v-for="(author, index) in optionsAuthor" :key="index">{{author}}</option>
+        </select>
+    </div>
 </div>
 </template>
 
@@ -56,14 +62,33 @@ export default {
 @import "../../assets/style/variables.scss";
 
 .search-bar {
+    display: flex;
     background-color: $bg-light-color;
-    padding: 50px;
+    padding: 20px;
     input {
-        width: 30%;
+        width: 40%;
         padding: 0px 20px;
         border-radius: 5px;
         border: none;
         outline: none;
+    }
+     & > div {
+        width: 30%;
+        padding-left: 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    label {
+        width: 60px;
+        text-align: end;
+        margin-right: 10px;
+    }
+    select {
+        width: calc(100% - 60px);
+        max-width: 200px;
+        padding: 0px 5px;
+        border-radius: 5px;
+        cursor: pointer;
     }
 }
 

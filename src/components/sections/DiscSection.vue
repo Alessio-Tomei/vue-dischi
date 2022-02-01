@@ -19,6 +19,7 @@
             </div>
         </div>
     </div>
+    <LoadingWait/>
 </section>
 </template>
 
@@ -26,6 +27,7 @@
 import axios from 'axios';
 import DiscBox from '../commons/DiscBox.vue'
 import SearchBar from '../commons/SearchBar.vue';
+import LoadingWait from '../commons/LoadingWait.vue';
 
 
 export default {
@@ -33,6 +35,7 @@ export default {
     components: {
         DiscBox,
         SearchBar,
+        LoadingWait,
     },
     data() {
         return {
@@ -78,7 +81,7 @@ export default {
                     discElement.author.toLowerCase().includes(this.filterAuthor.toLowerCase())
                 );
             });
-        }    
+        },  
     },
 }
 </script>

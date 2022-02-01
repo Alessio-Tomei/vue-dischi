@@ -57,6 +57,12 @@ export default {
                 left: 0;
                 width: 100%;
                 height: 100%;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(0.9);
+                    border: 1px solid white;
+                    box-shadow:  10px 10px 10px 10px black;
+                }
             }
         }
         h4 {
@@ -68,8 +74,12 @@ export default {
             text-align: center;
             text-transform: uppercase;
             word-break: break-word;
+            cursor: pointer;
             &::-webkit-scrollbar {
                 display: none;
+            }
+            &:hover {
+                text-decoration: underline;
             }
         }
         p {
@@ -82,6 +92,10 @@ export default {
             text-overflow: ellipsis;
             &:first-of-type {
                 margin-bottom: 5%;
+                cursor: pointer;
+                &:hover {
+                text-decoration: underline;
+            }
             }
         }
     }
