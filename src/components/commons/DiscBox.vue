@@ -18,12 +18,12 @@ export default {
     name: 'DiscBox',
     props: {
         discObj: Object,
-    }
+    },
 }
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/style/variables";
+@import "../../assets/style/variables.scss";
 
 .ms_disc-box {
     width: 100%;
@@ -70,9 +70,6 @@ export default {
             word-break: break-word;
             &::-webkit-scrollbar {
                 display: none;
-            }
-            &:hover {
-                
             }
         }
         p {
