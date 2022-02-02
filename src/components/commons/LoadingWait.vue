@@ -2,7 +2,9 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <i class="fas fa-spinner"></i>
+            <div>
+                <i class="fas fa-spinner"></i>
+            </div>
         </div>
     </div>    
 </div>
@@ -20,10 +22,12 @@ export default {
     display: flex;
     justify-content: center;
     font-size: 100px;
-    animation-name: spin;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    div {
+        animation-name: spin;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
 }
 
 @keyframes spin {

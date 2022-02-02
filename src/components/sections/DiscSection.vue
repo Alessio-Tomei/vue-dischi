@@ -1,5 +1,6 @@
 <template>
 <section>
+    <!-- ISSUE v-if !loading  sul container e v-else su componente LoadingWait fa si che le select non si riempono  -->
     <div class="container">
         <div class="row mb-3">
             <div class="col-12">
